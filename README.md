@@ -23,6 +23,21 @@ During the training phase, the model uses the following inputs and outputs:
 - decoder_output
 - proj_output: projection of decoder output into the token space (vocabulary space)
 
+## Usage
+
+You can train model by running `main.py` with following setup for `train_model` function:  
+
+```python
+train_model(config, val=False) # for specifying epoch for training you can look at Configs.py file
+```
+
+If you only want evaluate your model on validation set, You can run `main.py` with following setup for `train_model` function:  
+
+```python
+train_model(config, val=True, num_example=10) # num_example= number of example you want to test 
+```
+
+
 ## Results
 
 The results with my dataset and tokenizer were not satisfactory. However, you can create your own dataset and tokenizer using the same approach to see what improvements can be achieved.
